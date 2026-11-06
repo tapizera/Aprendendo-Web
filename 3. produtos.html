@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
@@ -10,39 +10,55 @@
 
 <body>
 
-    <header class="topo">
-        <h1 class="topo">Café da Serra</h1>
-        <p class="topo_apoio">Torrefação artesanal</p>  
+    <header class="header"> <!--cabeçalho  -->
+      <h1 class="header__name">Café da Serra</h1>
+      <p class="header__desc">Torrefação artesanal</p>  
     </header>
 
-    <main>
-        <section class="secao">
-            <h2>Nossos Cafés</h2>
-            <ul class="produtos"> <!-- ul "afasta" -->
-                <li class="produto"> <!-- li cria a "bolinha" -->
 
-                    <div class="produto__body">
-                        <h3 class="produto__nome">Bourbon Amarelo</h3>
-                        <p class="produto__texto">Encorpado, com chocolate amargo no final.</p>
-                        <p class="produto__preco">R$ 42,90</p>
-                        <button type="button" class="botao">Adicionar ao carrinho</button>
-                        </h3>
-                    </div>
-                </li>
+    <main> <!-- conteúdo principal -->
+      <section class="section">
+        <h2>Nossos Cafés</h2>
 
-                <li class="produto">
-                    <div class="produto__corpo">
-                        <h3 class="produto__nome">Café Gourmet</h3>
-                        <p class="produto__descricao">Um café encorpado com notas de chocolate.</p>
-                        <p class="produto__preco">R$ 25,00</p>
-                         <button type="button" class="produto__botao">Comprar</button>
-                    </div>
-                </li>
 
-            </ul>
-        </section>
+        <ul class="produtos"> <!-- ul "afasta" -->
+
+            
+          <li class="produto"> <!-- li cria a "bolinha" -->
+            <div class="produto__figura produto__figura-a"></div>
+
+            <div class="produto__corpo"> <!-- como um card, q tem nome, desc, valor, botão... -->
+                <h3 class="produto__nome">Bourbon Amarelo</h3>
+                <p class="produto__texto">Encorpado, com chocolate amargo no final.</p>
+                <p class="produto__preco">R$ 42,90</p>
+                <button type="button" class="botao">Adicionar ao carrinho</button>
+            </div>
+          </li>
+
+
+          <li class="produto">
+            <div class="produto__figura produto__figura-b"></div>
+
+            <div class="produto__corpo">
+                <h3 class="produto__nome">Café Gourmet</h3>
+                <p class="produto__descricao">Um café encorpado com notas de  chocolate.</p>    
+                <p class="produto__preco">R$ 25,00</p>
+                <button type="button" class="botao">Adicionar ao carrinho</button>
+            </div>
+          </li>
+
+        </ul>
+
+
+      </section>
     </main>
+
+
+    <footer>
+        Rodapé
+    </footer>
     
+
 </body>
 
 </html>

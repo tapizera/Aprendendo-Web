@@ -1,3 +1,102 @@
+/* por mais tenha apresentando de forma rasa o css na aula 3, só realemnte explicou aprofundado na aula 5 */
+
+/* 1° css q fiz sozin, uau*/
 .produto__nome {
-    color:rgb(255, 192, 1)
+    color:rgb(255, 192, 1);
+    font-weight: bold; /* coloquei isso dps aula8 mto css aq */
+    font-size: 1.05rem;
+}
+
+body {
+    margin: 0; 
+        /*p evitar q conflite c padding, explicacao melhor no notion de tudo aq*/
+    background-color: #e4edef;
+    color: #13333c;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+        /*se a 1° fonte nao funcionar na maquina do usuario, entao usa a outra*/
+    line-height: 1.5;
+}
+
+
+/* --- HEADER ("topo") --- */
+.header {
+    background-color: #10333c;
+    color: #ffff;
+    padding: 20px 24px;
+}
+
+.header__name {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.header__desc {
+    margin: 4px 0 0;
+    color: #86aeb8;
+    font-size: 0.85rem;
+}
+
+
+/* --- MAIN --- */
+.section {
+    background-color: #1b434d;
+    color: #ffff;
+    padding: 30px 24px;
+    gap: 20px;
+}
+
+
+/* --- MAIN > PRODUTOS --- */
+
+.produtos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    
+    display: grid;
+    grid-template-columns: 1fr, 1fr 1fr;
+    gap: 10px;
+}
+
+.produto { border-radius: 40px; }
+
+.produto__figura {
+    height: 130px;
+    height: 120px;
+}
+
+.produto__figura-a { background-color: #BC5A3C; }
+.produto__figura-b { background-color: #56392A; }
+.produto__figura-c { background-color: #060300; }
+
+.produto__corpo { padding: 16px; }
+
+.produto__texto {
+    margin: 8px 0;
+    color: #5C7883;
+    font-size: 0.9rem;
+}
+.produto__preco { 
+    margin: 0 0 14px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+/* --- BOTAO --- */
+
+.botao {
+    font: inherit;
+    width: 100%;
+    padding: 10px;
+    background-color: #06707d;
+    color: #ffffff;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #044E58;
 }
