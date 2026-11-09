@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     
 <head> 
     <meta charset="UTF-8">
@@ -12,14 +12,16 @@
 
     <header class="header"> <!--cabeçalho  -->
       <h1 class="header__name">Café da Serra</h1>
-      <p class="header__desc">Torrefação artesanal</p>  
+      <p class="header__desc">Torrefação artesanal</p> 
+
+      <!-- NOVO: na aula de JavaScript -->
+      <p class="header__carrinho">Carrinho <span id="contador">0</span></p>
     </header>
 
 
     <main> <!-- conteúdo principal -->
-      <section class="section">
+      <section class="secao">
         <h2>Nossos Cafés</h2>
-
 
         <ul class="produtos"> <!-- ul "afasta" -->
 
@@ -29,9 +31,9 @@
 
             <div class="produto__corpo"> <!-- como um card, q tem nome, desc, valor, botão... -->
                 <h3 class="produto__nome">Bourbon Amarelo</h3>
-                <p class="produto__texto">Encorpado, com chocolate amargo no final.</p>
+                <p class="produto__descricao">Encorpado, com chocolate amargo no final.</p>
                 <p class="produto__preco">R$ 42,90</p>
-                <button type="button" class="botao">Adicionar ao carrinho</button>
+                <button type="button" class="botao" id="botao1">Adicionar ao carrinho</button>
             </div>
           </li>
 
@@ -40,10 +42,21 @@
             <div class="produto__figura produto__figura-b"></div>
 
             <div class="produto__corpo">
-                <h3 class="produto__nome">Café Gourmet</h3>
-                <p class="produto__descricao">Um café encorpado com notas de  chocolate.</p>    
-                <p class="produto__preco">R$ 25,00</p>
-                <button type="button" class="botao">Adicionar ao carrinho</button>
+                <h3 class="produto__nome">Catuaí Vermelho</h3>
+                <p class="produto__descricao">Encorpado, com chocolate amargo no final.</p>    
+                <p class="produto__preco">R$ 38,50</p>
+                <button type="button" class="botao" id="botao2">Adicionar ao carrinho</button>
+            </div>
+          </li>
+
+          <li class="produto">
+            <div class="produto__figura produto__figura-c"></div>
+
+            <div class="produto__corpo">
+                <h3 class="produto__nome">Geisha da Serra</h3>
+                <p class="produto__descricao">sei oq e isso nao, nunca vi nem comi nem ouvi falar</p>    
+                <p class="produto__preco">R$ 89,90</p>
+                <button type="button" class="botao" id="botao3">Adicionar ao carrinho</button>
             </div>
           </li>
 
@@ -51,13 +64,73 @@
 
 
       </section>
+
+      <!-- UPDATE FASE 2 DO PROJETO -->
+
+      <section class="secao">
+        <h2>Compare antes de escolher</h2>
+        <div class="tabela-rolagem">
+          <table class="tabela">
+            <!-- 'titulo' da tabela -->
+            <caption>Perfil de cada lote de safra 2026</caption>
+            <!-- table head -->
+            <thead>
+              <tr>
+                <th scope="col">Café</th>
+                <th scope="col">Torra</th>
+                <th scope="col">Corpo</th>
+                <th scope="col">Acidez</th>
+                <th scope="col">Método Indicado</th>
+                <th scope="col">Preço</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Bourbon Amarelo</th>
+                <td>Média</td>
+                <td>Médio</td>
+                <td>Média</td>
+                <td>Coador de papel</td>
+                <td>R$ 42,90</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Catuaí Vermelho</th>
+                <td>Escura</td>
+                <td>Encorpado</td>
+                <td>Baixa</td>
+                <td>Prensa Francesa</td>
+                <td>R$ 38,50</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Geisha da Serra</th>
+                <td>Clara</td>
+                <td>Leve</td>
+                <td>Alta</td>
+                <td>Coador V60</td>
+                <td>R$ 89,90</td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="6">Todos os lotes são torrados na semana do envio</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
     </main>
 
 
-    <footer>
-        Rodapé
+    <footer class="footer">
+        <p>Esse é o rodapé</p>
     </footer>
     
+    <!-- linkagem do arquivo javascript deve ser feito aq embaixo, abaixo do footer, por convecao chama-se script.js, assim como style.css e index.html -->
+    <script src="script.js"></script>
 
 </body>
 

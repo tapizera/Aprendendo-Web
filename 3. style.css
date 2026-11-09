@@ -7,6 +7,14 @@
     font-size: 1.05rem;
 }
 
+/* UPDATE: ENTREGA 2 */
+:root {
+    --tinta: #10333C;
+    --papel: #FFFFFF;
+    --destaque: #06707D;
+    --texto-fraco: #5C7883;
+}
+
 body {
     margin: 0; 
         /*p evitar q conflite c padding, explicacao melhor no notion de tudo aq*/
@@ -27,18 +35,18 @@ body {
 
 .header__name {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .header__desc {
-    margin: 4px 0 0;
+    margin: px 0 0;
     color: #86aeb8;
     font-size: 0.85rem;
 }
 
 
 /* --- MAIN --- */
-.section {
+.secao {
     background-color: #1b434d;
     color: #ffff;
     padding: 30px 24px;
@@ -53,26 +61,30 @@ body {
     margin: 0;
     padding: 0;
 
-    
+    /* tinha q tirar as virgula entre os 1fr */
     display: grid;
-    grid-template-columns: 1fr, 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
 }
 
 .produto { border-radius: 40px; }
 
 .produto__figura {
     height: 130px;
-    height: 120px;
+    height: 200px;
+    border-radius: 1.5rem; /* eu q fiz */
 }
 
 .produto__figura-a { background-color: #BC5A3C; }
 .produto__figura-b { background-color: #56392A; }
 .produto__figura-c { background-color: #060300; }
 
-.produto__corpo { padding: 16px; }
+.produto__corpo { 
+    padding: 16px; 
+}
 
-.produto__texto {
+.produto__descricao {
     margin: 8px 0;
     color: #5C7883;
     font-size: 0.9rem;
@@ -99,4 +111,76 @@ body {
 
 .botao:hover {
     background-color: #044E58;
+}
+
+/* --- RODAPÉ --- */
+
+.footer p {
+    margin: 0;
+}
+
+
+/* --- UPDATE 2 DO PROJETO --- */
+
+.tabela-rolagem {
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background-color: var(--papel);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabela caption {
+    padding-bottom: 10px;
+    color: var(--texto-fraco);
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.tabela th,
+.tabela td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #CBD9DD;
+}
+
+.tabela thead th {
+    background-color: var(--destaque);
+    columns: var(--papel);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+.tabela tbody tr:nth-child(even) {
+    background-color: #F2F7F8;
+}
+
+.tabela tfoot td {
+    color: var(--texto-fraco);
+    font-size: 0.85rem;
+    border-bottom: none;
+}
+
+/* O CONTADOR DO CARRINHO */
+
+.header__carrinho {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+}
+
+#contador {
+    display: inline-block;
+    min-width: 24px;
+    padding: 2x 9px;
+    border-radius: 999px;
+    background-color: var(--destaque);
+    color: var(--papel);
+    font-weight: bold;
+    text-align: center;
 }
