@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check Point: loja virtual de games, consoles e acessórios.">
+  <title>Contato | Check Point</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topo">
+    <a class="logo" href="index.html">Check Point</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+        <li><a href="cadastro.html">Cadastrar produto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <h1>Fale com a gente</h1>
+    <div class="duas-colunas">
+      <form id="form-contato" aria-label="Formulário de contato">
+        <div class="erros" id="erros-contato" role="alert" hidden></div>
+        <div class="sucesso" id="ok-contato" role="status" hidden></div>
+        <div class="campo">
+          <label for="c-nome">Nome completo</label>
+          <input type="text" id="c-nome" name="nome" required minlength="3" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="c-email">E-mail</label>
+          <input type="email" id="c-email" name="email" required autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="c-assunto">Assunto</label>
+          <select id="c-assunto" name="assunto" required>
+            <option value="">Escolha um assunto</option>
+            <option>Dúvida sobre um produto</option>
+            <option>Pedido e entrega</option>
+            <option>Troca ou devolução</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="c-mensagem">Mensagem</label>
+          <textarea id="c-mensagem" name="mensagem" required minlength="10" maxlength="500"></textarea>
+          <p class="dica">Mínimo de 10 caracteres.</p>
+        </div>
+        <button type="submit" class="btn coral">Enviar mensagem</button>
+      </form>
+
+      <aside>
+        <h2>Outros canais</h2>
+        <ul class="destaque-lista">
+          <li>E-mail: <a href="mailto:contato@faseextra.example">contato@checkpoint.example</a></li>
+          <li>Atendimento: segunda a sexta, das 9h às 18h</li>
+          <li>Retorno em até 2 dias úteis</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Check Point · Projeto Integrador de Desenvolvimento Web · Estácio</p>
+  </footer>
+  <script src="js/produtos.js"></script>
+  <script src="js/formularios.js"></script>
+</body>
+</html>

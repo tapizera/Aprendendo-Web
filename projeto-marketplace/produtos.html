@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Check Point: loja virtual de games, consoles e acessórios.">
+
+  <title>Produtos | Check Point</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topo">
+    <a class="logo" href="index.html">Check Point</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html" aria-current="page">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="cadastro.html">Cadastrar produto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <h1>Produtos</h1>
+    <form class="filtros" onsubmit="return false" aria-label="Buscar e filtrar produtos">
+      <div>
+        <label for="busca">Buscar pelo nome</label>
+        <input type="search" id="busca" placeholder="Ex.: controle">
+      </div>
+      <div>
+        <label for="filtro-categoria">Categoria</label>
+        <select id="filtro-categoria">
+          <option value="todas">Todas</option>
+          <option value="Consoles">Consoles</option>
+          <option value="Jogos">Jogos</option>
+          <option value="Acessórios">Acessórios</option>
+        </select>
+      </div>
+    </form>
+    <p id="contagem" aria-live="polite"></p>
+    <div class="grade" id="lista-produtos"></div>
+    <dialog id="detalhes" aria-labelledby="det-titulo">
+      <article>
+        <img id="det-img" src="img/novo.svg" alt="">
+        <h2 id="det-titulo"></h2>
+        <p id="det-cat"></p>
+        <p id="det-desc"></p>
+        <p><strong id="det-preco"></strong></p>
+        <button type="button" class="btn" id="det-fechar">Fechar</button>
+      </article>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>© 2026 Check Point · Projeto Integrador de Desenvolvimento Web · Estácio</p>
+  </footer>
+  <script src="js/produtos.js"></script>
+</body>
+</html>

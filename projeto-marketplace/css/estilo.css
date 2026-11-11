@@ -1,0 +1,376 @@
+/* Estilo externo (Mobile First) */
+:root{
+  --fundo:#EEF1FF; --tinta:#151A3D; --azul:#3B4CFF; 
+  --amarelo:#FFD23F; --coral:#FF5A5F; --branco:#fff;
+  --sombra:4px 4px 0 var(--tinta);
+  --fonte-titulo:"Bungee","Arial Black",Impact,sans-serif;
+  --fonte-texto:"Rubik",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  line-height: 1.55;
+  font-size: 1rem
+}
+
+img {
+  max-width:100%;
+  height:auto;
+  display:block
+}
+
+a{color:var(--azul)}
+
+h1,h2,h3{font-family:var(--fonte-titulo);
+  font-weight:400;
+  line-height:1.15;
+  margin:0 0 .6rem
+}
+
+h1{font-size:2.1rem}
+h2{font-size:1.5rem}
+h3{font-size:1.1rem}
+p{margin:0 0 1rem;max-width:68ch}
+
+:focus-visible {
+  outline:3px solid var(--coral);
+  outline-offset:2px
+}
+
+.pular { 
+  position:absolute;
+  left:-999px;
+  top:0;
+  background:var(--amarelo);
+  padding:.5rem 1rem;
+  z-index:10
+}
+
+.pular:focus{left:0}
+
+/* topo e menu */
+.topo { 
+  background:var(--tinta);
+  color:var(--branco);
+  padding:.8rem 1rem;
+  position:sticky;
+  top:0;z-index:5
+}
+.logo { 
+  font-family:var(--fonte-titulo);
+  font-size:1.5rem;
+  color:var(--amarelo);
+  text-decoration:none;
+  display:inline-block;
+  margin-bottom:.5rem
+}
+
+.topo nav ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem
+}
+
+.topo nav a {
+  display:block;
+  padding:.4rem .8rem;
+  color:var(--branco);
+  text-decoration:none;
+  border:2px solid transparent;
+  border-radius:999px;
+  font-weight:500;
+  font-size:.95rem
+}
+
+.topo nav a:hover{
+  border-color:var(--amarelo)
+}
+
+.topo nav a[aria-current="page"]{
+  background:var(--amarelo);
+  color:var(--tinta)
+}
+
+main {
+  padding:1.2rem 1rem 2rem;
+  max-width:1100px;
+  margin:0 auto
+}
+
+section{margin-bottom:2.2rem}
+
+/* hero */
+.hero { 
+  background:var(--azul);
+  color:var(--branco);
+  border:3px solid var(--tinta);
+  box-shadow:8px 8px 0 var(--tinta);
+  padding:1.5rem 1.2rem;
+  margin:.6rem 0 2.4rem
+}
+
+.hero h1 {
+  color:var(--amarelo);
+  text-shadow:3px 3px 0 var(--tinta);
+  font-size:2.4rem
+}
+
+.hero p {font-size:1.1rem}
+
+/* botões */
+.btn {
+  display:inline-block;
+  font-family:var(--fonte-texto);
+  font-weight:700;
+  font-size:1rem;
+  background:var(--amarelo);
+  color:var(--tinta);
+  border:3px solid var(--tinta);
+  box-shadow:3px 3px 0 var(--tinta);
+  padding:.6rem 1.1rem;
+  cursor:pointer;
+  text-decoration:none
+}
+
+.btn:hover {
+  transform:translate(-1px,-1px);
+  box-shadow:5px 5px 0 var(--tinta)
+}
+
+.btn:active {
+  transform:translate(3px,3px);
+  box-shadow:0 0 0 var(--tinta)
+}
+
+.btn.coral {
+  background:var(--coral);
+  color:var(--branco)
+}
+
+/* grade de produtos */
+.grade {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.2rem
+}
+.card { 
+  background:var(--branco);
+  border:3px solid var(--tinta);
+  box-shadow:var(--sombra);display:flex;
+  flex-direction:column
+}
+
+.card img { 
+  width:100%;aspect-ratio:4/3;
+  object-fit:cover;
+  border-bottom:3px solid var(--tinta)
+}
+
+.card .corpo {
+  padding:.9rem;
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;flex:1
+}
+
+.card .cat { 
+  font-size:.85rem;
+  font-weight:500;
+  color:var(--azul)
+}
+
+.card .preco { 
+  font-weight:700;
+  font-size:1.25rem;
+  margin:0
+}
+
+.card .btn {
+  margin-top:auto;
+  align-self:flex-start
+}
+
+.vazio {
+  background:var(--branco);
+  border:3px dashed var(--tinta);
+  padding:1rem
+}
+
+/* filtros e formulários */
+.filtros{ 
+  display:grid;
+  gap:.8rem;margin-bottom:1.4rem
+}
+
+label { 
+  display:block;
+  font-weight:500;
+  margin-bottom:.2rem
+}
+
+input,select,textarea { 
+  width:100%;
+  font:inherit;
+  padding:.6rem;border:3px solid var(--tinta);
+  background:var(--branco);
+  color:var(--tinta)
+}
+
+textarea {
+  min-height:7rem;
+  resize:vertical
+}
+
+form .campo{
+  margin-bottom:1rem
+}
+
+fieldset {
+  border:3px solid var(--tinta);
+  background:var(--branco);
+  padding:1rem;margin:0 0 1rem
+}
+
+legend {
+  font-family:var(--fonte-titulo);
+  padding:0 .4rem
+}
+
+.dica {
+  font-size:.85rem;
+  margin:.2rem 0 0
+
+}
+
+.erros {
+  background:#FFE3E4;
+  border:3px solid var(--coral);
+  padding:.8rem 1rem;
+  margin-bottom:1rem
+}
+
+.erros ul {
+  margin:.3rem 0 0;
+  padding-left:1.2rem
+}
+
+.sucesso {
+  background:#DDFBE8;
+  border:3px solid #1E9E55;
+  padding:.8rem 1rem;
+  margin-bottom:1rem
+}
+
+[hidden] {
+  display:none!important
+}
+
+/* tabela */
+.rolagem {
+  overflow-x:auto
+}
+
+table {
+  border-collapse:collapse;
+  width:100%;
+  min-width:420px;
+  background:var(--branco);
+  border:3px solid var(--tinta)
+}
+
+th,td {
+  border:2px solid var(--tinta);
+  padding:.55rem .7rem;
+  text-align:left
+}
+
+thead th {
+  background:var(--tinta);
+  color:var(--amarelo)
+}
+
+/* detalhes */
+dialog {
+  border:3px solid var(--tinta);
+  box-shadow:8px 8px 0 var(--tinta);
+  padding:0;max-width:min(92vw,460px);
+  background:var(--branco);
+  color:var(--tinta)
+}
+
+dialog::backdrop { 
+  background:rgba(21,26,61,.65)
+}
+
+dialog article {
+  padding:1rem
+}
+
+dialog img {
+  border:3px solid var(--tinta); 
+  margin-bottom:.8rem;width:100%
+}
+
+.destaque-lista{
+  padding-left:1.2rem
+}
+
+.destaque-lista li{
+  margin-bottom:.4rem
+}
+
+footer {
+  background:var(--tinta);
+  color:var(--branco);
+  padding:1.2rem 1rem;
+  text-align:center;
+  font-size:.9rem
+}
+
+footer p{
+  margin:0 auto
+}
+
+/* tablet e desktop */
+@media (min-width:700px){
+  h1{font-size:2.8rem}
+  h2{font-size:1.8rem}
+
+  .topo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.8rem 2rem
+  }
+
+  .logo{margin:0}
+
+  main{padding:1.6rem 2rem 3rem}
+
+  .hero{padding:2.5rem 2.2rem}
+
+  .hero h1{font-size:3.4rem}
+
+  .grade {grid-template-columns:repeat(2,1fr)}
+
+  .filtros{grid-template-columns:2fr 1fr}
+
+  .duas-colunas{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem
+  }
+}
+
+@media (min-width:1000px){
+  .grade{grid-template-columns:repeat(4,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  .btn{transition:none}.btn:hover,.btn:active{transform:none}}
